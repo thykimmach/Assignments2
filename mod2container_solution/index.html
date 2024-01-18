@@ -12,6 +12,10 @@
 }
 h1 {
   margin-bottom: 15px;
+  width: 90%
+  margin-right: auto
+  margin-left: auto
+  font-family: Corbel
   text-align: center;
 }
 
@@ -23,7 +27,7 @@ p {
   margin-right: auto;
   margin-left: auto;
   font-family: Helvetica;
-  color: white;
+  color: black;
 }
 
 /* Simple Responsive Framework. */
@@ -46,8 +50,9 @@ p {
   .col-lg-3 {
     width: 33,33%;
   }
+}
 /********** Tablet view **********/
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px), (max-width: 991px) {
   .col-md-1, .col-md-2, .col-md-3 {
     float: left;
     border: 2px solid black;
@@ -83,7 +88,6 @@ p {
 </head>
 <body>
 <h1>Our Menu</h1>
-
 <div class="row">
   <div class="col-lg-3 col-md-3 col-sm-3"><p>Chicken</p></div>
   <div class="col-lg-3 col-md-3 col-sm-3"><p>Beef</p></div>
