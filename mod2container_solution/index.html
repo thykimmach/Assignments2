@@ -9,25 +9,17 @@
 /********** Base styles **********/
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 h1 {
   margin-bottom: 15px;
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
   font-family: Corbel;
   text-align: center;
   }
 div#container {
   position: relative;
 }
-.bigframe {
-  border: 2px solid black;
-  background-color: #808080;
-  width: 100%;
-  padding: 20px;
-  height: 200px;
- }
   p{
     font-family: Helvetica;
     color: black;
@@ -37,33 +29,33 @@ div#container {
 .row {
   width: 100%;
 }
-.pink {
-  background-color: #FFC0CB;
+.bigframe {
+  border: 2px solid black;
+  background-color: #808080;
+  width: 90%;
+  padding: 20px;
+  height: 200px;
+ }
+.smallframe {
   position: relative;
   top: 0;
   right: 0;
   width: 30%
   height: 30%;
   border: 1px;
-  color: black;
   font-family: Helvetica;
+  }
+#pink {
+  background-color: #FFC0CB;
+  color: black;
 }
-}
-.red {
+#red {
  background-color: #FF0000;
- position: absolute;
- top: 0;
- right: 0;
  color: white;
-font-family: Helvetica;
 }
-.yellow {
+#yellow {
  background-color: #FFE5B4;
- position: absolute;
- top: 0;
- right: 0;
  color: black;
-font-family: Helvetica;
 }
 /********** Desktop view **********/
 @media (min-width: 992px) {
@@ -101,11 +93,12 @@ font-family: Helvetica;
 <div class="row">
   <div class="col-lg-1 col-md-1 col-sm-1">
    <div class="bigframe" id="container"> 
-     <div class="pink">Chicken</div>
+     <div class="smallframe">
+       <p id="pink">Chicken</p>
+     </div>
      <p>This is the description of the Chicken disk</p>
    </div>
-     
-    </div>
+  </div>
   
   <div class="col-lg-1 col-md-1 col-sm-1"><p>Beef</p></div>
   <div class="col-lg-1 col-md-2 col-sm-1"><p>Sushi</p></div>
