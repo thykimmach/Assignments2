@@ -7,15 +7,20 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            display: flex;
         }
 
         .section {
-            width: 100%;
             box-sizing: border-box;
             padding: 20px;
             position: relative;
-            margin-bottom: 20px;
+            margin-right: 20px;
+            flex: 1;
             background-color: #f0f0f0; /* Optional: Add background color */
+        }
+
+        .section:last-child {
+            margin-right: 0;
         }
 
         .section-title {
@@ -26,17 +31,14 @@
             color: #333;
         }
 
-        @media only screen and (min-width: 600px) {
-            /* Tablet styles */
-            .section {
-                width: 50%;
+        @media only screen and (max-width: 768px) {
+            /* For smaller screens, stack the sections */
+            body {
+                flex-direction: column;
             }
-        }
 
-        @media only screen and (min-width: 768px) {
-            /* Desktop styles */
             .section {
-                width: 33.33%;
+                margin-right: 0;
             }
         }
     </style>
