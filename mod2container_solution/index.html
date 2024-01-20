@@ -19,14 +19,13 @@ h1 {
   text-align: center;
   }
 div#container {
-
   position: relative;
-  flex: 1;
 }
 p {
   border: 2px solid black;
   background-color: #808080;
-  width: 90%;
+  width: 100%;
+  padding: 10px;
   height: 200px;
   font-family: Helvetica;
   color: black;
@@ -77,7 +76,6 @@ font-family: Helvetica;
 @media (min-width: 768px) and (max-width: 991px) {
   .col-md-1, .col-md-2 {
     float: left;
-    /*border: 1px solid black;*/
   }
   .col-md-1 {
     width: 50%;
@@ -101,10 +99,8 @@ font-family: Helvetica;
 <h1>Our Menu</h1>
 <div class="row">
   <div class="col-lg-1 col-md-1 col-sm-1">
-  <div id="container">
-    <div class="pink">Chicken</div>
+  <div id="container" class="pink">Chicken</div>
   <p>This is the description of the Chicken disk</p>
-  </div>
   </div>
   
   <div class="col-lg-1 col-md-1 col-sm-1"><p>Beef</p></div>
