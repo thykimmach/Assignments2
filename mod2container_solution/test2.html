@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .section {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            position: relative;
+            margin-bottom: 20px;
+            background-color: #f0f0f0; /* Optional: Add background color */
+        }
+
+        .section-title {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        @media only screen and (min-width: 600px) {
+            /* Tablet styles */
+            .section {
+                width: 50%;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            /* Desktop styles */
+            .section {
+                width: 33.33%;
+            }
+        }
+    </style>
+    <title>Your Frontend</title>
+</head>
+<body>
+
+    <div class="section">
+        <div class="section-title">Section 1</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Section 2</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Section 3</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+    </div>
+
+</body>
+</html>
