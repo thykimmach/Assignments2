@@ -35,6 +35,7 @@ p {
 /* Simple Responsive Framework. */
 .row {
   width: 100%;
+  position: relative;
 }
 #pink {
   background-color: #FFC0CB;
@@ -55,8 +56,8 @@ p {
  background-color: #FFE5B4;
  position: absolute;
  top: 0;
-right: 0;
-color: black
+ right: 0;
+ color: black
 }
 /********** Desktop view **********/
 @media (min-width: 992px) {
@@ -94,10 +95,10 @@ color: black
 <h1>Our Menu</h1>
 <div class="row">
   <div id="container" class="col-lg-1 col-md-1 col-sm-1">
-    
-  <p>This is the description of the Chicken disk
-  <p id="pink">Chicken</p></p>
+  <div id="pink">Chicken</div> 
+  <p>This is the description of the Chicken disk</p>
   </div>
+  
   <div class="col-lg-1 col-md-1 col-sm-1"><p>Beef</p></div>
   <div class="col-lg-1 col-md-2 col-sm-1"><p>Sushi</p></div>
 </div>
