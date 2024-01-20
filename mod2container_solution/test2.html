@@ -1,113 +1,123 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Responsive Layout</title>
-  <style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Layout</title>
+<style>
 
-  /********** Base styles **********/
-  * {
-    box-sizing: border-box;
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin-bottom: 25px;
+  font-family: Corbel;
+  text-align: center;
   }
-  h1 {
-    margin-bottom: 15px;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    font-family: Corbel;
-    text-align: center;
-  }
-  div#container {
-    position: relative;
-  }
-  p {
-    border: 2px solid black;
-    background-color: #808080;
-    width: 100%;
-    padding: 10px;
-    height: 200px;
+div#container {
+  position: relative;
+}
+  p{
     font-family: Helvetica;
     color: black;
     position: relative;
   }
-  /* Simple Responsive Framework. */
-  .row {
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+}
+.bigframe {
+  border: 2px solid black;
+  background-color: #808080;
+  width: 90%;
+  padding: 20px;
+  height: 200px;
+ }
+.smallframe {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 30%
+  height: 30%;
+  border: 1px;
+  font-family: Helvetica;
+  }
+#pink {
+  background-color: #FFC0CB;
+  color: black;
+}
+#red {
+ background-color: #FF0000;
+ color: white;
+}
+#yellow {
+ background-color: #FFE5B4;
+ color: black;
+}
+/********** Desktop view **********/
+@media (min-width: 992px) {
+  .col-lg-1 {
+   float: left;
+   /*border: 1px solid black;*/
+   width: 33.33%;
+  }
+}
+/********** Tablet view **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-1, .col-md-2 {
+    float: left;
+  }
+  .col-md-1 {
+    width: 50%;
+  }
+  .col-md-2 {
     width: 100%;
   }
-  .pink {
-    background-color: #FFC0CB;
-    position: relative;
-    width: 30%;
-    height: 30%;
-    margin-top: 10px;
-    margin-right: 10px;
-    border: 1px;
-    color: black;
-    font-family: Helvetica;
+}
+/********** Mobile view **********/
+@media (max-width: 767px) {
+  .col-sm-1 {
+    float: left;
+    border: 1px solid black;
+    width: 100%;
   }
-  .pink-title {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  .red {
-    background-color: #FF0000;
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: white;
-    font-family: Helvetica;
-  }
-  .yellow {
-    background-color: #FFE5B4;
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: black;
-    font-family: Helvetica;
-  }
-  /********** Desktop view **********/
-  @media (min-width: 992px) {
-    .col-lg-1 {
-      float: left;
-      width: 33.33%;
-    }
-  }
-  /********** Tablet view **********/
-  @media (min-width: 768px) and (max-width: 991px) {
-    .col-md-1, .col-md-2 {
-      float: left;
-    }
-    .col-md-1 {
-      width: 50%;
-    }
-    .col-md-2 {
-      width: 100%;
-    }
-  }
-  /********** Mobile view **********/
-  @media (max-width: 767px) {
-    .col-sm-1 {
-      float: left;
-      border: 1px solid black;
-      width: 100%;
-    }
-  }
+}
 
-  </style>
+</style>
 </head>
 <body>
-  <h1>Our Menu</h1>
-  <div class="row">
-    <div class="col-lg-1 col-md-1 col-sm-1">
-      <div class="pink">
-        <div class="pink-title">Chicken</div>
-      </div>
-      <p>This is the description of the Chicken disk</p>
-    </div>
-    <div class="col-lg-1 col-md-1 col-sm-1"><p>Beef</p></div>
-    <div class="col-lg-1 col-md-2 col-sm-1"><p>Sushi</p></div>
+<h1>Our Menu</h1>
+<div class="row">
+  <div class="col-lg-1 col-md-1 col-sm-1">
+   <div class="bigframe" id="container"> 
+     <div class="smallframe">
+       <p id="pink">Chicken</p>
+     </div>
+     <p>This is the description of the Chicken disk</p>
+   </div>
   </div>
+
+  <div class="col-lg-1 col-md-1 col-sm-1">
+   <div class="bigframe" id="container"> 
+     <div class="smallframe">
+       <p id="red">Beef</p>
+     </div>
+     <p>This is the description of the Beef disk</p>
+   </div>
+  </div>
+  
+  <div class="col-lg-1 col-md-2 col-sm-1">
+   <div class="bigframe" id="container"> 
+     <div class="smallframe">
+       <p id="red">Sushi</p>
+     </div>
+     <p>This is the description of the Sushi</p>
+   </div>
+  </div>
+</div>
+
 </body>
 </html>
