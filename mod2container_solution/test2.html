@@ -24,12 +24,17 @@ div#container {
     font-family: Corbel;
     color: black;
     font-size:20px;
+    font-weight: bold;
     position: relative;
+  }
+  #downline {
+    top: 40px;
   }
 /* Simple Responsive Framework. */
 .row {
   width: 100%;
 }
+  
 .bigframe {
   border: 2px solid black;
   background-color: #808080;
@@ -37,17 +42,20 @@ div#container {
   margin: 10px;
   height: 150px;
   font-family: Corbel;
+  font-weight: bold;
  }
 .smallframe {
   position: absolute;
   top: 0;
   right: 0;
+  float: right;
   width: 100px;
   height: 30px;
   border: 2px solid black;
   font-family: Corbel;
   text-align: center;
   font-size:20px;
+  font-weight: bold;
   }
 #pink {
   background-color: #FFC0CB;
@@ -112,11 +120,13 @@ div#container {
      <p>This is the description of the Beef disk</p>
    </div>
   </div>
-  
+
   <div class="col-lg-1 col-md-2 col-sm-1">
    <div class="bigframe" id="container"> 
-     <div class="smallframe" id="yellow>Sushi</div>
-     <p>This is the description of the Sushi</p>
+     <div class="smallframe">
+       <p id="yellow">Sushi</p>
+     </div>
+     <p id="downline">This is the description of the Sushi</p>
    </div>
   </div>
 </div>
